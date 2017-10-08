@@ -1,0 +1,113 @@
+.scroll {
+    margin: 0;
+    overflow: scroll;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    opacity: 0.9;
+}
+li img{
+
+    height: 100px;
+    image-rendering: 1p;
+}
+
+li a {
+    display: block;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-style: italic;
+    font-size: 20px;
+}
+
+li a:hover:not(.active) {
+    background-color: #4CAF50;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+.sloganStyle{
+    float: right;
+    margin-bottom: 0;
+    margin-top: 40px;
+    margin-right: 220px;
+    text-align: center;
+    color: #4CAF50;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-style: italic;
+}
+
+
+    
+    .h1DeatilsStyle{
+    
+        text-align: center;
+        color: #4CAF50;
+        font-style: italic;
+    }
+    
+    .formStyle{
+        float: right;
+        
+        margin-right: 370px;
+        
+    }
+    
+    .toppingsClass{
+        font-style: italic;
+        color: #4CAF50;
+        float: right; 
+        margin: 10px;
+    }
+    
+    .sizeClass{
+        font-style: italic;
+        color: #4CAF50;
+        margin: 10px;
+        float: left;
+       
+    }
+    
+    .pizzaClass{
+        font-style: italic;
+        color: #4CAF50;
+        margin: 10px;
+        float: left;
+       
+    }
+    
+    .crustClass{
+        font-style: italic;
+        color: #4CAF50;
+        float: left;
+        margin: 10px;
+    }
+    
+    .btn{
+        font-style: italic;
+        color: #4CAF50;
+       margin-top: 150px; 
+        margin-left: 70px;
+    }
+    
+    .canclLink{
+        font-style: italic;
+        color: #4CAF50;
+        position: relative;
+        margin-top: 0px; 
+        margin-left: 240px;
+     }
+    
+     .imageDetails{
+         margin-left: 350px;
+         align-content: center;
+     }

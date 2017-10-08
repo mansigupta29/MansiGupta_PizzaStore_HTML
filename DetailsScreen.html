@@ -1,0 +1,121 @@
+<!--
+
+Name : Mansi Gupta
+Student No: 300969816
+File Desc: Details Screen Of Pizza Store
+File Version: 0.1
+ -->
+
+<html>
+        <head>
+        <link rel="stylesheet" href="detailsScreen.css" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <title>FIRESTROM PIZZA</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta name="description" content="Order Firestrom’s Pizza Online for Fresh and Quality Pizzas! Find Near-by Stores, Menu, Deals, Discount Vouchers & Special Offers.">
+    <meta name="keywords" content="Firestrom, Firestrom’s pizza, firestrom canada, order pizza, pizza delivery, pizza coupons, food restaurant, pizza restaurant, take way, takeout, home delivery, order online, online food, meal delivery, dining restaurant, casual dining, pizza shops">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="FIRESTROM PIZZA">
+    <meta property="og:site_name" content="FIRESTROM PIZZA(CANADA)">
+    <meta property="og:url" content="/Menu.html">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Order Firestrom’s Pizza Online for Fresh and Quality Pizzas! Find Near-by Stores, Menu, Deals, Discount Vouchers & Special Offers.">
+    <meta property="og:locale" content="en_CA">
+        </head>
+        <body class="scroll">
+            <ul>
+                <li><img src="pizza.png" alt=""><h1 class="sloganStyle">"Serving great pizza from our family to yours."</h1></li>
+                <li><a class="active" href="Menu.html"><b style="font-size: 24px">---- FIRESTROM PIZZA -----</b></a></li>
+              </ul>
+              
+              <div>
+                  <h1 class="h1DeatilsStyle">Customize Your Order:</h1>
+                   <img class="imageDetails" src="pizzaDetailsScreen.jpg"> 
+                   <div class="formStyle">
+                    <div class="pizzaClass">
+                    <h3>Pizza:</h3>
+                    <h4 id="result"></h4>
+                    </div>
+                    <div class="sizeClass">
+                    <h3>Size:</h3>
+                    <select onclick="getSize(this)" name="size" id="size">
+                    <option selected disabled>Choose one</option>
+                      <option value="Small">Small</option>
+                      <option value="Medium">Medium</option>
+                      <option value="Large">Large</option>
+                      <option value="Extra Large">Extra Large</option>
+                    </select>
+                </div>
+                    <div class="toppingsClass">
+                    <h3>Toppings:</h3>
+                    <input onclick="checkboxFunc(this)" type="checkbox" id="capsicum" value="Capsicum">Capsicum<br>
+                    <input onclick="checkboxFunc(this)" type="checkbox" id="onions" value="Onions">Onions<br>
+                    <input onclick="checkboxFunc(this)" type="checkbox" id="corn" value="Corn">Corn<br>
+                    <input onclick="checkboxFunc(this)" type="checkbox" id="greenpepper" value="Green Pepper">Green Pepper<br>
+                    <input onclick="checkboxFunc(this)" type="checkbox" id="cheese" value="Cheese">Cheese<br>
+                    <input onclick="checkboxFunc(this)" type="checkbox" id="olives" value="Olives">Olives<br>
+                    </div>
+
+                    <div class="crustClass">
+                            <h3>Crust:</h3>
+                            <select onclick="getCrust(this)" id="crust" name="crust">
+                                <option selected disabled>Choose one</option>
+                              <option value="Thin Crust">Thin Crust</option>
+                              <option value="Thick Crust">Thick Crust</option>
+                              <option value="Extra Cheese">Extra Cheese</option>
+                              <option value="Cheese Burst">Cheese Burst</option>
+                            </select>
+                        </div>
+                    <br><br>
+                    
+                    
+                    <a href="Order.html"><button class="btn">Order Now</button></a>
+                    <a class="canclLink" href="Menu.html">Cancel Order</a>   
+                    </div>
+                             
+              </div>
+              
+
+              <script type="text/javascript">
+
+                function getSize(size) {
+                    var e = document.getElementById("size");
+                       var size =  e.options[e.selectedIndex].value
+                        localStorage.setItem("size", size);
+                }  
+
+                function getCrust(crust) {
+                    var e = document.getElementById("crust");
+                       var crust =  e.options[e.selectedIndex].value
+                        localStorage.setItem("crust", crust);
+                } 
+                
+                function checkboxFunc(checkboxVar){
+                if(document.getElementById("capsicum").checked){
+                    localStorage.setItem("capsicum", document.getElementById("capsicum").value);
+                }
+                if(document.getElementById("onions").checked == true){
+                    localStorage.setItem("onions", document.getElementById("onions").value);
+                }
+                if(document.getElementById("corn").checked == true){
+                    localStorage.setItem("corn", document.getElementById("corn").value);
+                }
+                if(document.getElementById("greenpepper").checked == true){
+                    localStorage.setItem("greenpepper", document.getElementById("greenpepper").value);
+                }
+                if(document.getElementById("cheese").checked == true){
+                    localStorage.setItem("cheese", document.getElementById("cheese").value);
+                }
+                if(document.getElementById("olives").checked ===true){
+                    localStorage.setItem("olives", document.getElementById("olives").value);
+                }
+                }
+                        document.getElementById("result").innerHTML = localStorage.getItem("pizzaName");
+                       
+                    </script>
+                  
+        </body>
+        </html>

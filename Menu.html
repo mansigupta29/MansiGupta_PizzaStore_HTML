@@ -1,0 +1,124 @@
+<!--
+
+Name : Mansi Gupta
+Student No: 300969816
+File Desc: Main Screen Of Pizza Store
+File Version: 0.1
+ -->
+
+<html>
+<head>
+<link rel="stylesheet" href="menu.css" type="text/css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>FIRESTROM PIZZA</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta name="description" content="Order Firestrom’s Pizza Online for Fresh and Quality Pizzas! Find Near-by Stores, Menu, Deals, Discount Vouchers & Special Offers.">
+    <meta name="keywords" content="Firestrom, Firestrom’s pizza, firestrom canada, order pizza, pizza delivery, pizza coupons, food restaurant, pizza restaurant, take way, takeout, home delivery, order online, online food, meal delivery, dining restaurant, casual dining, pizza shops">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="FIRESTROM PIZZA">
+    <meta property="og:site_name" content="FIRESTROM PIZZA(CANADA)">
+    <meta property="og:url" content="/Menu.html">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Order Firestrom’s Pizza Online for Fresh and Quality Pizzas! Find Near-by Stores, Menu, Deals, Discount Vouchers & Special Offers.">
+    <meta property="og:locale" content="en_CA">
+</head>
+<body class="scroll">
+    <ul class="ul_id">
+        <li><img src="pizza.png" alt=""><h2 class="sloganStyle">"Serving great pizza from our family to yours."</h2></li>
+        <li><a class="active" href="#"><b style="font-size: 24px">---- FIRESTROM PIZZA -----</b></a></li>
+        <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Veg</a>
+                <div class="dropdown-content">
+                  <a onclick="showDetails(this)" data-id="FarmHouse Pizza" href="DetailsScreen.html">FarmHouse Pizza</a>
+                  <a onclick="showDetails(this)" data-id="Veggie Del. Pizza" href="DetailsScreen.html">Veggie Delight Pizza</a>
+                  <a onclick="showDetails(this)" data-id="County Spec. Pizza" href="DetailsScreen.html">Country Special Pizza</a>
+                </div>
+              </li>
+              <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Non-Veg</a>
+                    <div class="dropdown-content">
+                      <a onclick="showDetails(this)" data-id="Zesty Pepperoni Pizza" href="DetailsScreen.html">Zesty Pepperoni Pizza</a>
+                      <a onclick="showDetails(this)" data-id="Chicken Tikka Pizza" href="DetailsScreen.html">Chicken Tikka Pizza</a>
+                      <a onclick="showDetails(this)" data-id="PowerSteak Pizza" href="DetailsScreen.html">Power Steak House</a>
+                    </div>
+                  </li>
+      </ul>
+      <div class="container">
+            <h2 class="carouselStyle"><b>Start Your Order</b></h2>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+              </ol>
+          
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+          
+                <div class="item active">
+                  <img src="pizzaDeal.jpg" alt="Los Angeles" style="width:100%;">
+                  <div class="carousel-caption">
+                    <h3>Pizza is always so much fun!</h3>
+                    <p>Order Now!</p>
+                  </div>
+                </div>
+          
+                <div class="item">
+                  <img src="pizzaDeal2.jpg" alt="Chicago" style="width:100%;">
+                  <div class="carousel-caption">
+                    <h3>Yummiee!!</h3>
+                    <p>Order Now!</p>
+                  </div>
+                </div>
+              
+                <div class="item">
+                  <img src="pizzaDeal1.jpg" alt="New York" style="width:100%;">
+                  <div class="carousel-caption">
+                    <h3>Pizza Deal</h3>
+                    <p>Order Now!</p>
+                  </div>
+                </div>
+            
+              </div>
+          
+              <!-- Left and right controls -->
+              <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <p class="descStyle">Pizza Pizza Ltd. is a franchised Canadian pizza fast-food restaurant, with its headquarters in Etobicoke, Toronto. Its restaurants are mainly in the province of Ontario. Other locations operate in Quebec, Nova Scotia, and in western Canada. Franchises in western Canada are mostly run through Alberta-based subsidiary Pizza 73, and in non-traditional locations such as university campuses and movie theatres throughout Canada. It has over 500 locations, including over 150 non-traditional locations.</p>
+            <h1 class="h1Style"><b> Order Now!!</b></h1>
+        </div>
+
+    <script type="text/javascript">
+      localStorage.removeItem("pizzaName");
+      localStorage.removeItem("size");
+      localStorage.removeItem("crust");
+
+      localStorage.removeItem("olives");
+      localStorage.removeItem("onions");
+      localStorage.removeItem("capsicum");
+      localStorage.removeItem("greenpepper");
+      localStorage.removeItem("corn");
+      localStorage.removeItem("cheese");
+        function showDetails(pizza) {
+            var pizzaType = pizza.getAttribute("data-id");
+            localStorage.setItem("pizzaName", pizzaType);
+        }  
+        </script>
+
+
+</body>
+</html>

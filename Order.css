@@ -1,0 +1,129 @@
+/*
+Name : Mansi Gupta
+Student No: 300969816
+File Desc: Order Screen Css (Order.html)
+File Version: 0.1
+*/
+
+.scroll {
+    margin: 0;
+    overflow: scroll;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    opacity: 0.9;
+}
+li img{
+
+    height: 100px;
+    image-rendering: 1p;
+}
+
+li a {
+    display: block;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-style: italic;
+    font-size: 20px;
+}
+
+li a:hover:not(.active) {
+    background-color: #4CAF50;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+
+.sloganStyle{
+    float: right;
+    margin-bottom: 0;
+    margin-top: 40px;
+    margin-right: 220px;
+    text-align: center;
+    color: #4CAF50;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-style: italic;
+}
+
+.nameClass{
+    font-style: italic;
+    color: #4CAF50;
+    float: left;
+    margin: 10px;
+    margin-left: 40px;
+}
+
+.sizeOrderClass{
+    font-style: italic;
+    color: #4CAF50;
+    float: left;
+    margin: 10px;
+}
+
+.crustOrderClass{
+    font-style: italic;
+    color: #4CAF50;
+    float: left;
+    margin: 10px;
+}
+
+.toppingsOrderClass{
+    font-style: italic;
+    color: #4CAF50;
+    float: left;
+    margin: 10px;
+}
+ 
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+.orderData{
+    font-style: italic;
+    color: #4CAF50;
+    margin: 10px;
+
+    text-align: center;
+
+}
+
+.lnk{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.overlayStyle{
+    text-align: center;
+    font-style: italic;
+    color: #B4F117;
+}

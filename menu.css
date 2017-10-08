@@ -1,0 +1,118 @@
+/*
+
+Name : Mansi Gupta
+Student No: 300969816
+File Desc: Main Screen Css (Menu.html)
+File Version: 0.1
+*/
+
+.scroll {
+    margin: 0;
+    overflow: scroll;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    opacity: 0.9;
+}
+li img{
+
+    height: 100px;
+    image-rendering: 1p;
+}
+
+li a {
+    display: block;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-style: italic;
+    font-size: 20px;
+}
+
+li a:hover:not(.active) {
+    background-color: #4CAF50;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+.sloganStyle{
+    float: right;
+    margin-bottom: 0;
+    margin-top: 40px;
+    margin-right: 200px;
+    text-align: center;
+    color: #4CAF50;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-style: italic;
+}
+
+.carouselStyle{
+    color: #4CAF50;
+    font-style: italic;
+}
+
+.descStyle{
+    padding: 35px;
+    text-align: center;
+    color: #4CAF50;
+    font-style: italic;
+    font-size: 24px;
+}
+
+.h1Style{
+    text-align: center;
+    color: #4CAF50;
+    padding: 20px;
+    font-size: 40px;
+    font-style: italic;
+}
+
+
+
+.dropdown-content {
+
+    display: none;
+    
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+}
+
+.dropdown-content a:hover {background-color: #333}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #4CAF50;
+}
+
+.dropbtn {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-style: italic;
+    font-size: 20px;
+}

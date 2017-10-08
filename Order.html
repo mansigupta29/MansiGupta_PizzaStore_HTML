@@ -1,0 +1,115 @@
+<!--
+
+Name : Mansi Gupta
+Student No: 300969816
+File Desc: Order Screen Of Pizza Store
+File Version: 0.1
+ -->
+
+<html>
+        <head>
+        <link rel="stylesheet" href="Order.css" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <title>FIRESTROM PIZZA</title>
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+        <meta name="description" content="Order Firestrom’s Pizza Online for Fresh and Quality Pizzas! Find Near-by Stores, Menu, Deals, Discount Vouchers & Special Offers.">
+        <meta name="keywords" content="Firestrom, Firestrom’s pizza, firestrom canada, order pizza, pizza delivery, pizza coupons, food restaurant, pizza restaurant, take way, takeout, home delivery, order online, online food, meal delivery, dining restaurant, casual dining, pizza shops">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="FIRESTROM PIZZA">
+        <meta property="og:site_name" content="FIRESTROM PIZZA(CANADA)">
+        <meta property="og:url" content="/Menu.html">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="Order Firestrom’s Pizza Online for Fresh and Quality Pizzas! Find Near-by Stores, Menu, Deals, Discount Vouchers & Special Offers.">
+        <meta property="og:locale" content="en_CA">
+        </head>
+        <body class="scroll">
+            <ul>
+                <li><img src="pizza.png" alt=""><h1 class="sloganStyle">"Serving great pizza from our family to yours."</h1></li>
+                <li><a class="active" href="Menu.html"><b style="font-size: 24px">---- FIRESTROM PIZZA -----</b></a></li>
+              </ul>
+
+              <div class="nameClass">
+                  <h2>PizzaName:</h1>
+                  <h3 id="result"></h2>
+              </div>
+            <div class="sizeOrderClass">
+                <h2 class="">Size:</h1>
+                <h3 id="result1"></h2>
+            </div>
+            <div class="crustOrderClass">
+                <h2>Crust:</h1>
+                <h3 id="result2"></h2>
+            </div>
+            <div class="toppingsOrderClass">
+                <h2>Toppings:</h1>
+                <h3 id="result3"></h2>
+            </div> 
+            <br>
+            <br>
+            <br>
+            <div class = "orderData">
+                <br>
+                <br>
+            <h1 >Payment Details:</h3>
+                <h2>Name:</h2>
+                <input type="text">
+                <h2>Delivery Address:</h2>
+                <input type="text">
+                <h2>Telephone No:</h2>
+                <input type="number">
+                <h2>Credit Card No:</h2>
+                <input type="number">
+                <h2>Expiry Date:</h2>
+                <input type="date">
+                <h2>CVV:</h2>
+                <input type="number">
+                <br><br>
+                <button onclick="on()" class="btn">Submit</button>
+                <a class="lnk" href="Menu.html">Cancel Order</a>   
+
+                <div class="overlayStyle" id="overlay" onclick="off()">
+                    <b>
+                    <h1>Order Confirmation</h1>
+                    <div id="text"></div>
+                    <div> Thanks for Order. Your Pizza will be delivered soon.</div>
+                    <h2>Transaction Status: Paid</h2>
+                    <h2>Price Paid: $25</h2>
+                    </b>
+                  </div>
+            </div>
+
+              <script type="text/javascript">
+                                        var toppings = "";
+                                        document.getElementById("result").innerHTML = localStorage.getItem("pizzaName");
+                                        document.getElementById("result1").innerHTML = localStorage.getItem("size");
+                                        document.getElementById("result2").innerHTML = localStorage.getItem("crust")
+
+                                        if (localStorage.getItem("olives") != null)
+                                         toppings  =  toppings + localStorage.getItem("olives") + " ";
+                                        if (localStorage.getItem("cheese") != null)
+                                        toppings  =  toppings +  localStorage.getItem("cheese") + " ";
+                                        if (localStorage.getItem("greenpepper") != null)
+                                        toppings  =  toppings + localStorage.getItem("greenpepper") + " ";
+                                        if (localStorage.getItem("corn") != null)
+                                        toppings  =  toppings + localStorage.getItem("corn") + " ";
+                                        if (localStorage.getItem("onions") != null)
+                                        toppings  =  toppings + localStorage.getItem("onions") + " ";
+                                        if (localStorage.getItem("capsicum") != null)
+                                        toppings  =  toppings + localStorage.getItem("capsicum") + " ";
+                                        document.getElementById("result3").innerHTML = toppings;
+                                        function on() {
+                                            document.getElementById("overlay").style.display = "block";
+                                        }
+
+                                        function off() {
+                                            document.getElementById("overlay").style.display = "none";
+                                            window.location="/home/mansi/Desktop/Web/Assignment-1/Menu.html";
+                                        }    
+
+                                    
+                                    </script>
+        </body>
+        </html>
